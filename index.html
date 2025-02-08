@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Bar Example</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3D405B;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+        }
+
+        nav a {
+            color: #F2CC8F;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #E07A5F;
+        }
+
+        .div1 {
+            padding-top: 60px; 
+            margin: 0;
+            height: 100vh;
+            background-image: url('hansdahl1.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        .div2 {
+            padding-top: 60px; 
+            margin: 0;
+            height: 100vh;
+            background-image: url('hansdahl2.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        .div3 {
+            padding-top: 60px; 
+            margin: 0;
+            height: 100vh;
+            background-image: url('hansdahl3.jpg');
+            background-size: cover; 
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+
+        .basestyle{
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 36px;
+            padding: 20px;
+            text-align: Left;
+        }
+
+        img {
+            width: 100px; 
+            height: auto;
+        }
+        button {
+            width: 300px;
+            height: 100px;
+            border-radius: 15px;
+            background-color: #F4F1DE;
+            color: #3D405B;
+            border: 3px solid #81B29A;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.5s border-color 0.5s;
+        }
+
+        button:hover {
+            border-color: #F4F1DE;
+            background-color: #81B29A;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      Mariano's Portfolio
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#wdpersonal">Web Dev Projects</a></li>
+        <li><a href="#wdgroup">Web Dev Group Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <div class="div1" id="home">
+    <div class="overlay">
+        <h1 class="basestyle" style="margin-top: 400px; margin-left: 60px;">
+            Hello, and welcome to my portfolio!
+        </h1>
+        <h1 class="basestyle" style="margin-left: 60px;">
+            Below, you'll find my projects for CSC-351
+        </h1>
+    </div>
+  </div>
+  <div class="div2" id="wdpersonal">
+    <div class="overlay">
+        <h1 class="basestyle" style="margin-top: 100px; float:right; margin-right: 60px;">
+            Here are my personal projects for CSC-351...
+        </h1>
+        <button style="text-align: center; margin-top: 200px; float:right; margin-left: 1000px; margin-right: 60px;" onclick="window.location.href='http://10.26.1.113/soaresm001/'">
+            CSC 351 Solo Projects
+        </button>
+
+    </div>
+  </div>
+  <div class="div3" id="wdgroup">
+    <div class="overlay">
+        <h1 class="basestyle" style="margin-top: 100px; margin-left: 60px;">
+            ...and here are my group projects for CSC-351.
+        </h1>
+        <button style=" text-align: center; float:left; margin-left: 100px; margin-top: 200px;" onclick="window.location.href='http://10.26.1.113/team2/'">
+            CSC 351 Group Projects
+        </button>
+    </div>
+  </div>
+
+</body>
+</html>
