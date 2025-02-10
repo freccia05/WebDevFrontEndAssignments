@@ -41,6 +41,20 @@
 
         }
 
+        @keyframes hoverNav {
+            0%{
+                transform: rotate(-5deg);
+            }
+            50%{
+                transform: rotate(10deg) scale(1.1);
+            }
+            
+            100%{
+                transform: rotate(-5deg) scale(1);
+            }
+
+        }
+
         @keyframes codingg {
             0% {
                 font-family: 'Courier New', Courier, monospace;
@@ -74,6 +88,9 @@
             }
 
         }
+
+        
+
         @font-face {
             font-family: 'VCR';
             src: url('/CSSTask/VCR_OSD_MONO_1.001.ttf') format('truetype'); 
@@ -163,18 +180,24 @@
             transform: rotate(5deg) scale(1.4);
         }
 
+        .joshtitle span:active {
+            transform: rotate(-5deg) ;
+        }
+
         .basictext{
             font-family: 'Press Start 2P';
             color:white;
+            padding:4px;
+            margin:10px;
         }
         nav a {
             text-decoration: none;
             display:inline-block;
-            transition: transform 0.3s ease;
+            transition: 1s ease-in;
             margin:10px;
         }
         nav a:hover{
-            transform: scale(1.1);
+            animation: hoverNav 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
         }
         .coolpics {
             border: 5px solid #ffffff;
@@ -265,6 +288,26 @@
         .staugustine span:nth-child(22) {
             animation-delay: 2.1s;
         }
+        
+        #gototop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #000000;
+            color: white;
+            font-family: "Press Start 2P";
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 3px white solid;
+            font-size: 16px;
+            z-index: 5;
+        }
+
+        #gototop:hover {
+            background-color: #ffffff;
+            color:black;
+            border:black;
+        }
 
 
 
@@ -273,12 +316,13 @@
 <body bgcolor="black">
     <header>       <!--header section-->
         <center>
-            <h1 class = 'joshtitle'>
+            <h1 class = 'joshtitle' id="top">
                 <span >J</span>
                 <span>O</span>
                 <span>S</span>
                 <span>H</span>
-                <span>' S</span>
+                <span>'</span>
+                <span>S</span>
                 <span> </span>
                 <span>B</span>
                 <span>L</span>
@@ -302,6 +346,7 @@
           </h2>
         </center>
     </header>
+    <a href="#top" id="gototop">To Top</a>
     <center>
     <h4 class='basictext'>Some Navigation links around my page:</h4> <!--Links to navigate around the page-->
     <nav>
@@ -314,12 +359,12 @@
     <hr> <!--displays a line break in the text-->
     <center>
     <section id="Code Commenting">
-    <h2 class="basictext" style="color: #640AFF">>My Thoughts on Code Commenting...</h2>
+    <h2 class="basictext" style="color: #FF0054">>My Thoughts on Code Commenting...</h2>
     <p class="basictext" style="margin-left: -50px;">One of my <i>favorite</i> hobbies is <b class="codinggCSS"> CODING!</b></p> <!--<b> bolds text, <i> italicizes text-->
     <div>
         <main>  <!--specifies the main content of the webpage-->
-        <pre>
-            <span class="basictext" style="font-size: 14px;">
+        <div style="padding: 3px;margin-right:auto">
+            <span class="basictext" style="font-size: 14px; padding: 3px;margin-right: 3px;">
                 Sometimes coding comments can be very tedious and annoying... However, they are very important for documentation!
             I once read from a Catholic book, <cite>Holiness for Everyone</cite> from Eric Sammons on the spirituality of St. Josemaria Escriva.
             He speaks about doing the jobs that no one else notices. Sometimes we become tempted to let simple work slide since it will go unnoticed anyways.
@@ -328,7 +373,7 @@
             but also makes you more of a hard worker. Commenting teaches you that God desires we do everything, whether it is a simple or grand task, 
             be done with <q>enthusiasm and love</q> (<i>Holiness for Everyone</i>, Sammons).
             </span>
-        </pre>
+        </div>
         </main>
     </div>
 
@@ -337,9 +382,8 @@
     <code>
         //here is an example of a comment in C++!   <!--code text-->
     </code>
-    <hr>
-    <article class="basictext">
-        <h2 style="color: #FF7733; ">>The C++ Language</h2>
+    <article class="basictext" style="font-size: 16px;">
+        <h3 style="color: #FF7733; ">>>The C++ Language</h3>
         <p>
             C++ is a programming language that implements many different forms of coding
             such as object-oriented, functional, or procedural languages.
@@ -356,7 +400,7 @@
     <br>
     <hr> <!--displays a line break in the text-->
     <center>
-    <h2 class="basictext" style="color: #FFCE47">>Quotes!</h2>
+    <h2 class="basictext" id="AugustinePicture" style="color: #813dcf">>Quotes!</h2>
     <p class="staugustine basictext">Here is one of my favorite quotes from <p class="staugustine basictext" style="color:rgb(255, 0, 157); letter-spacing:-8px;">
         <span>S</span>
         <span>t</span>
@@ -396,7 +440,7 @@
     </div>
 
     <p class="basictext" style="font-size: 12px;">Here is a picture of Saint Augustine because he is a cool guy!</p>
-    <section id="AugustinePicture">
+    <section >
     <div>
     <figure>    <!--displays an image-->
         <img class="coolpics" src="augustine.jpg" alt="augustine" style="width:40%">
@@ -411,7 +455,7 @@
 
     <center>   
     <section id="MediaGallery" class="basictext">
-       <h2 style="color:aqua">>My Media Gallery!</h2>
+       <h2 style="color:#11df89">>My Media Gallery!</h2>
        <h6>by Joshua Fouch</h6>
 
        <h3>Picture of Spencer Glacier in Alaska, I took with my iPhone!</h3>
