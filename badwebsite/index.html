@@ -18,6 +18,8 @@
 
         body {
             font-family: Arial, sans-serif;
+            background-color: #8a96ff;
+            background-size: cover;
         }
 
         header {
@@ -26,8 +28,8 @@
             font-size: 30px;
             justify-content: space-between;
             align-items: center;
-            background-image: url('hansdahl4.png');
             background-color: #3D405B;
+            background-size: cover;
             color: #F2CC8F;
             padding: 10px 20px;
             position: fixed;
@@ -61,11 +63,10 @@
         .div1 {
             padding-top: 60px; 
             margin: 0;
-            height: 50vh;
-            background-image: url('hansdahl1.jpg');
+            height: 100vh;
+
             background-size: cover;
             background-position: center;
-            position: relative;
             z-index: 1;
         }
         .div2 {
@@ -91,7 +92,7 @@
         .div4 {
             padding-top: 60px; 
             margin: 0;
-            height: 50vh;
+            height: 100vh;
             background-image: url('hansdahl4.jpg');
             background-size: cover; 
             background-position: center;
@@ -172,6 +173,17 @@
         .socials:hover{
             filter:invert();
         }
+        .image-container {
+            display: flex;
+            justify-content: space-around; /* Adjusts spacing between images */
+            flex-direction: column;
+            align-items: center; /* Vertically aligns images */
+            gap: 20px; /* Optional: Adds space between images */
+        }
+        .image-container img {
+            width: 800px; /* Adjust image width as needed */
+            height: auto;
+        }
 
         
     </style>
@@ -193,25 +205,22 @@
   <div class="div1" id="home">
     <div class="overlay">
         <h1 class="basestyle" style="margin-top: 100px; margin-left: 60px;">
-            Here, you'll find my solo projects for the time being.
+            Here are some screenshots of my website revamp!
         </h1>
+        <div class="image-container">
+            <img src="im1.png" alt="Image 1">
+            <img src="im2.png" alt="Image 2">
+            <img src="im3.png" alt="Image 3">
+            <img src="im4.png" alt="Image 3">
+        </div>
+        <div class="basestyle">
+            Heres the link to the pdf documenting it:
+            <a href="https://docs.google.com/document/d/1NG4vHHVmq1IzNCGYZ1GljpCXg_cdNbjaSnVJpnOq6EE/edit?usp=sharing" target="_blank">link</a>
+
+        </div>
     </div>
   </div>
-  <div class="div2" id="home">
-    <div class="overlay">
-        <center  style="margin-top: 100px;">
-            <button class="button2" onclick="window.location.href='http://10.26.1.113/soaresm001/WebDevFrontEndAssignments/CSSTask/'">
-                CSS Mini Project
-            </button>
-            <button class="button2" onclick="window.location.href='http://10.26.1.113/soaresm001/WebDevFrontEndAssignments/TagTeams/'">
-                Tag Teams
-            </button>
-            <button class="button2" onclick="window.location.href='http://10.26.1.113/soaresm001/WebDevFrontEndAssignments/badwebsite'">
-                Restyling A Bad Website
-            </button>
-        </center>
-    </div>
-  </div>
+
 
 </body>
 </html>
