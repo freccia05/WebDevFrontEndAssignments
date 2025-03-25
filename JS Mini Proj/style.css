@@ -1,0 +1,54 @@
+:root {
+    --purp: #0D0628;  
+    --amro: #410303; 
+    --white: #EFD9CE;     
+}
+
+.controlsdiv{
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    margin-left:25%;
+    align-items: center;
+}
+
+.playButton{
+    border-radius: 25px;
+    background-color: var(--purp); 
+    color: var(--white);
+    border: none;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.playButton:hover {
+    background-color: var(--amro);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 10px; 
+    background: var(--purp);
+    border-radius: 5px; 
+    outline: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: var(--amro); 
+    border: none;
+    transition: background-color 0.3s ease; 
+}
+
+input[type="range"]:hover {
+    background: var(--amro);
+}
